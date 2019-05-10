@@ -3,20 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>learning-parent</artifactId>
+        <artifactId>design-patterns</artifactId>
         <groupId>com.gary.learning</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>design-patterns</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>builder-mode</module>
-        <module>decorator-mode</module>
-        <module>factory-mode</module>
-        <module>prototype-mode</module>
-        <module>proxy-mode</module>
-    </modules>
+    <artifactId>proxy-mode</artifactId>
+
 
 </project>
