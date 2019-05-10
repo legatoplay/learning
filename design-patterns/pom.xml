@@ -17,6 +17,7 @@
         <module>factory-mode</module>
         <module>prototype-mode</module>
         <module>proxy-mode</module>
+        <module>strategy-mode</module>
     </modules>
 
 </project>
