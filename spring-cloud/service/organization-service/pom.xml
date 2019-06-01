@@ -2,27 +2,23 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>service</artifactId>
+        <groupId>com.gary.learning</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.gary.learning</groupId>
-    <artifactId>learning-parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <modules>
-        <module>concurrent</module>
-        <module>design-patterns</module>
-        <module>jvm</module>
-        <module>spring-cloud</module>
-    </modules>
-    <packaging>pom</packaging>
-    <properties>
-        <project.build.source.version>1.8</project.build.source.version>
-        <project.build.target.version>1.8</project.build.target.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <artifactId>organization-service</artifactId>
+    <packaging>jar</packaging>
 
-    <dependencyManagement>
-
-    </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>com.gary.learning</groupId>
+            <artifactId>organization-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <finalName>${project.artifactId}</finalName>
