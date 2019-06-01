@@ -15,6 +15,7 @@
         <module>api</module>
         <module>service</module>
         <module>eureka-service</module>
+        <module>application</module>
     </modules>
     <properties>
         <!-- spring boot version -->
