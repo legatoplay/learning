@@ -12,6 +12,7 @@
         <module>design-patterns</module>
         <module>jvm</module>
         <module>spring-cloud</module>
+        <module>dynamic-proxy</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
