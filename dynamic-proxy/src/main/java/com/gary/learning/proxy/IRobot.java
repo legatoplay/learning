@@ -1,5 +1,7 @@
 package com.gary.learning.proxy;
 
+import java.util.List;
+
 /**
  * Created by Gary on 2019-06-05.
  *
@@ -10,4 +12,6 @@ package com.gary.learning.proxy;
  */
 public interface IRobot {
     void sayHello(String name);
+
+    List<String> getList();
 }

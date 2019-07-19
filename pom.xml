@@ -21,10 +21,20 @@
         <project.build.target.version>1.8</project.build.target.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <dependencyManagement>
-
-    </dependencyManagement>
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <!--<recommendId>nexus-releases</recommendId>-->
+            <name>Nexus Release Repository</name>
+            <url>http://nexus.goldlib.com/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <!--<recommendId>nexus-snapshots</recommendId>-->
+            <name>Nexus Snapshot Repository</name>
+            <url>http://nexus.goldlib.com/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <build>
         <finalName>${project.artifactId}</finalName>

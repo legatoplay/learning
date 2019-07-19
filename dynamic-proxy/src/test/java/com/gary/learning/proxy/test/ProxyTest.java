@@ -5,6 +5,7 @@ import com.gary.learning.proxy.Robot;
 import org.junit.Test;
 
 import java.lang.reflect.Proxy;
+import java.util.*;
 
 /**
  * Created by Gary on 2019-06-05.
@@ -39,11 +40,25 @@ public class ProxyTest {
                 IRobot.class.getClassLoader(),
                 new Class[]{IRobot.class},
                 (proxy, method, args) -> {
+                    Class<?> returnType = method.getReturnType();
+                    System.out.println(method);
                     System.out.println("--before say hello...");
                     Object ret = method.invoke(robot, args);
+                    if (List.class.isAssignableFrom(returnType)) {
+                        List<Object> list = (List<Object>) ret;
+                        list.add("2222");
+                        return list;
+                    }
+
+
                     System.out.println("--after say hello...");
                     return ret;
                 });
-        robotProxy.sayHello("test");
+        System.out.println(robotProxy.getList());
+    }
+
+    @Test
+    public void testInstance() {
+        System.out.println(Collection.class.isAssignableFrom(List.class));
     }
 }
